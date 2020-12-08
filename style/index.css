@@ -1,3 +1,5 @@
+/*CSS Reset & Formatting */
+
 html, body, div, span, applet, object, iframe,  
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,  
 a, abbr, acronym, address, big, cite, code,  
@@ -13,104 +15,141 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {  
 margin: 0;  
 padding: 0;  
-border: 0;  
+/* border: 0;   */
 font-size: 100%;  
 font: inherit;  
 vertical-align: baseline;  
 }
 
-.container .item{
-    border: 1px solid black;
-    height: 50px;
-    width: 200px;
-    margin: 20px;
-    background: lightgray;
-    margin-top: 10px;
-    font-size: 32px;
-  }
-  .container {
-    display: flex;
-    flex-flow: row wrap;
-    border: 1px solid black;
-  } 
-  .container2 {
-    justify-content: flex-start;
-    display: flex;
-    flex-flow: row;
-    border: 1px solid black;
-    margin-left: 40px;
-    text-align: center;
-    
-  }
-  .container2 .item {
-    border: 1px solid black;
-    height: 20px;
-    width: 100px;
-    background: lightgrey;
-    text-align: center;
-    padding:5px;
-  }
 
-
-
-
-  .container3 {
-    display: flex;
-    flex-flow: row;
-    align-content: space-evenly;
-    border: 1px solid black;
-    height: 300px; 
-  }
-  .container3 .item {
-    border: 1px solid black;
-    margin: 10px;
-    width: 500px;
-  }
-
-  .container3 .image{
-      background:url(https://picsum.photos/150);
-    width: 400px;
-    object-fit: fill;
-    margin:10px;
-    box-sizing:border-box;  
+*{
+  box-sizing:border-box;
+  max-width:100%;
+}
+html{
+  font-size:62.5%;
 }
 
-  .container4 {
-    display: flex;
-    flex-flow: row wrap;
-    border: 1px solid black;
-    align-content: space-between;
-    justify-content: center;
-    }
-  .container4 .item {
-    background:url(https://picsum.photos/150);
-    border: 1px solid black;
-    margin: 10px;
-    width: 180px;
-    height: 180px; 
-  }
-  .container5 {
-    display: flex;
-    flex-flow: row;
-    border:1px solid black;
-    justify-content: center;
-  }
-  .container5 .item {
-    border:1px solid black;
-    margin:10px;
-    width:200px;
-    height: 150px;
+body{
+  background-color:#374542;
+  color:#1F282C;
+  font-size:1.6rem;
+  line-height:1.5;
+  font-family: 'Lato';
+}
+
+a{
+  text-decoration: none;
+  font-family:'Montserrat';
+  color:#209423;
+}
+
+h2{
+  font-family:'Anton';
+  font-size:3rem;
+}
+/* END OF RESET/FORMATTING */
+
+
+
+
+/* NAV BAR STYLING */
+header{
+  display:flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #293339;
+}
+h1{
+  font-family:'Anton';
+  font-size:5rem;
+  text-shadow:2px 2px #1A700D;
+  width:50%;
+  text-align:center;
+}
+nav{
+display:flex;
+justify-content:space-evenly;
+width:50%;
+}
+
+nav a{
+text-align:center;
+margin:auto;
+padding:12px 30px;
+font-family:'Montserrat';
+color:#209423;
+border-radius:15px;
+transition: .3s;
+}
+
+nav a:hover{
+  background:#209423;
+  color:black;
+}
+/* END OF NAV BAR */
+
+
+/* TOP SECTION STYLING */
+
+.top{
+  display:flex;
+  justify-content:space-around;
+  width:100%;
+  padding:1%;
+}
+.top .topimg{
+  width:40%;
+}
+.top .bio{
+  width:40%;
+  display:flex;
+  flex-flow:column wrap;
+  justify-content:center;
+}
+
+.top .topimg img{
+  width:400px;
+  height:400px;
+}
+
+.top .bio a{
+  transition:.3s;
+}
+.top .bio a:hover{
+  font-weight:bold;
+}
+
+/* MIDDLE SECTION STYLING */
+
+.mid{
+  display:flex;
+  flex-flow:row wrap;
+  padding:2% 2%;
+}
+
+.mid .project{
+  width:25%;
+  text-align:center;
+}
+
+/* BOTTOM STYLING */
+footer{
+  display:flex;
+  justify-content:space-around;
+  margin:2% 0;
+  border-top: 1px solid #293339;
+}
+footer .footermid{
+  text-align:center;
   }
 
-  .itemcontainer {
-      display:flex;
-      border: 1px black;
-      flex-flow: row-reverse wrap;
-      justify-content: center;
-      margin-top: 5rem;
-      margin-left:75px;
-
+  footer .footermid a{
+    padding:6px 15px;
+    border-radius:15px;
+    transition:.3s;
   }
-  .itemcontainer .item{
-     
+
+  footer .footermid a:hover{
+    background:#209423;
+    color:black;
   }
