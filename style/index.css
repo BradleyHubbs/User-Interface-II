@@ -26,6 +26,11 @@ vertical-align: baseline;
   box-sizing:border-box;
   max-width:100%;
 }
+
+img{
+  border-radius:25px;
+}
+
 html{
   font-size:62.5%;
 }
@@ -108,8 +113,9 @@ nav a:hover{
 }
 
 .top .topimg img{
-  width:400px;
-  height:400px;
+  width:100%;
+  height:auto;
+  border-radius:50%;
 }
 
 .top .bio a{
@@ -130,6 +136,12 @@ nav a:hover{
 .mid .project{
   width:25%;
   text-align:center;
+}
+
+.mid .project img{
+  width:100%;
+  height:auto;
+  padding:3%;
 }
 
 /* BOTTOM STYLING */
@@ -153,3 +165,37 @@ footer .footermid{
     background:#209423;
     color:black;
   }
+
+
+@media (max-width:800px){
+  .top{
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+  }
+
+}
+
+@media (max-width:500px){
+  header{
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+  }
+  nav{
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+  }
+
+.mid{
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.mid .project{
+  width:80%;
+}
+
+}
